@@ -4,7 +4,7 @@ const Button = ({css, text}) => {
     return ( 
         <a 
             href="!#" 
-            className={`btn ${css}`}
+            className={`${css}`}
         >{text}</a>
      );
 }

@@ -1,0 +1,6 @@
+In order to organize the files in a better way I did'nt create a component directory in the sass directory, 
+instead I decided to create a sass file for each React component, wraping them in a directory as well, so when you want to edit
+the styles of that component, you just need to search for that component in the component directory.
+(except for the headings and paragraph components that the scss files are in the _typography.scss file)
+
+The imports of the components are done in main.scss to maintain the consistency.

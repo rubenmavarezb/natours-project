@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../../assets/img/logo-white.png';
-import Button from '../utils/Button'
-
+import Button from '../utils/button/Button';
 
 const Header = () => {
 
@@ -16,7 +15,7 @@ const Header = () => {
                     <span className='heading-primary--sub'>is where life happens</span>
                 </h1>
                 <Button
-                    css="btn--white btn--animated"
+                    css="btn btn--white btn--animated"
                     text="Discover our tours"
                 />
             </div>
