@@ -3,7 +3,6 @@ import React from 'react';
 const Float = () => {
     return ( 
         <section className="grid-test">
-
             <div className="row">
                 <div className="col-1-of-2">
                     col 1 of 2

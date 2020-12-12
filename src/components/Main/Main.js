@@ -3,6 +3,10 @@ import Heading2 from '../utils/heading2/Heading2';
 import Heading3 from '../utils/heading3/Heading3';
 import Paragraph from '../utils/paragraph/Paragraph';
 import Button from '../utils/button/Button';
+import Img from '../utils/img/Img';
+import image1 from '../../assets/img/nat-1-large.jpg';
+import image2 from '../../assets/img/nat-2-large.jpg';
+import image3 from '../../assets/img/nat-3-large.jpg';
 
 const Main = () => {
     return ( 
@@ -24,6 +28,7 @@ const Main = () => {
                             Porro ducimus, fugiat dolorum excepturi officiis fuga impedit odit ad 
                             velit amet natus eveniet fugit consectetur laborum placeat nisi. Sed, 
                             quaerat quasi!"
+                            css="paragraph"
                         />
 
                         <Heading3
@@ -33,6 +38,7 @@ const Main = () => {
                         <Paragraph
                             text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                             Blanditiis a distinctio unde reiciendis nesciunt nobis, qui ea maiores!"
+                            css="paragraph"
                         />
                         <Button
                             css="btn-text"
@@ -40,7 +46,11 @@ const Main = () => {
                         />
                     </div>
                     <div className="col-1-of-2">
-                        image
+                        <div className="composition">
+                            <Img path={image1} alt="Photo 1" css="composition__photo composition__photo--p1"/>
+                            <Img path={image2} alt="Photo 2" css="composition__photo composition__photo--p2"/>
+                            <Img path={image3} alt="Photo 3" css="composition__photo composition__photo--p3"/>
+                        </div>
                     </div>
                 </div>
             </section>

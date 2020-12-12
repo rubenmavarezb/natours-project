@@ -1,0 +1,22 @@
+[
+    {
+        "icon":"icon-basic-world",
+        "title":"Explore the world",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus provident optio nostrum culpa ut laudantium voluptatum ducimus est, libero id sit"
+    },
+    {
+        "icon":"icon-basic-compass",
+        "title":"Meet nature",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus provident optio nostrum culpa ut laudantium voluptatum ducimus est, libero id sit"
+    },
+    {
+        "icon":"icon-basic-map",
+        "title":"Find your way",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus provident optio nostrum culpa ut laudantium voluptatum ducimus est, libero id sit"
+    },
+    {
+        "icon":"icon-basic-heart",
+        "title":"Live a healthier life",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus provident optio nostrum culpa ut laudantium voluptatum ducimus est, libero id sit"
+    }
+]
