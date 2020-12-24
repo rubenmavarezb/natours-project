@@ -2,9 +2,12 @@ import React from 'react';
 
 const Heading = ({text}) => {
     return ( 
-        <h2 className="heading-secondary">
-            {text}
-        </h2>
+        <div className="u-center-text u-mb-big">
+            <h2 className="heading-secondary">
+                {text}
+            </h2>
+        </div>
+
      );
 }
  

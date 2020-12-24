@@ -5,7 +5,7 @@ import Paragraph from '../utils/paragraph/Paragraph';
 
 const FeatureBox = ({card}) => {
 
-    const { icon, title, paragraph } = card
+    const { icon, title, paragraph } = card;
 
     return (
         <div className="col-1-of-4">

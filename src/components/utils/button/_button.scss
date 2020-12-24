@@ -48,6 +48,15 @@
         }
     }
 
+    &--green{
+        background-color: $medium-green;
+        color: $white;
+
+        &::after{
+            background-color: $medium-green;
+        }
+    }
+
     &--animated{
         animation: moveInBottom .8s ease-out;
         animation-fill-mode: backwards;

@@ -7,7 +7,7 @@ const Features = () => {
 
     useEffect(() => {
         setCards(featuresData);
-    }, [])
+    }, [cards])
 
     return ( 
         <section className="section-features">

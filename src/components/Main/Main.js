@@ -12,11 +12,9 @@ const Main = () => {
     return ( 
         <main>
             <section className="section-about">
-                <div className="u-center-text u-mb-big">
-                    <Heading2
-                        text="Exciting tours for adventurous people"
-                    />
-                </div>
+                <Heading2
+                    text="Exciting tours for adventurous people"
+                />
                 <div className="row">
                     <div className="col-1-of-2">
                         <Heading3
