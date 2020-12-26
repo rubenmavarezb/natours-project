@@ -2,10 +2,11 @@ import React from 'react';
 import Button from '../utils/button/Button';
 
 const ToursCard = ({card}) => {
+    
+    if(!card) return null;
 
     const { id, title, features, price } = card;
 
-    if(!card) return null;
 
     return ( 
         <div className="col-1-of-3">
