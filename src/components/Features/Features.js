@@ -10,7 +10,7 @@ const Features = () => {
     }, [cards])
 
     return ( 
-        <section className="section-features">
+        <section className="section-features" id="section-features">
             <div className="row">
                 {cards?.map((card, i) => (
                     <FeatureBox

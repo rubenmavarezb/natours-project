@@ -13,7 +13,7 @@ const Stories = () => {
         setStories(storiesData);
     }, [])
     return ( 
-        <section className="section-stories">
+        <section className="section-stories" id="section-stories">
             <div className="bg-video">
                 <video className="bg-video__content" autoPlay muted loop>
                     <source src={video} type="video/mp4"/>

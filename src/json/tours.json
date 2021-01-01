@@ -10,7 +10,8 @@
             "Difficulty: easy"
         ],
         "price": 297,
-        "img": ""
+        "img": "nat-5.jpg",
+        "img_secondary": "nat-8.jpg"
     },
     {
         "id": "2",
@@ -23,7 +24,8 @@
             "Difficulty: medium"
         ],
         "price": 497,
-        "img": ""
+        "img": "nat-6.jpg",
+        "img_secondary": "nat-9.jpg"
     },
     {
         "id": "3",
@@ -36,6 +38,7 @@
             "Difficulty: hard"
         ],
         "price": 897,
-        "img": ""
+        "img": "nat-7.jpg",
+        "img_secondary": "nat-10.jpg"
     }
 ]

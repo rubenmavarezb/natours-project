@@ -10,7 +10,7 @@ import image3 from '../../assets/img/nat-3-large.jpg';
 
 const Main = () => {
     return ( 
-        <main>
+        <main id="section-about">
             <section className="section-about">
                 <Heading2
                     text="Exciting tours for adventurous people"

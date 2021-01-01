@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../utils/button/Button';
 
-const ToursCard = ({card}) => {
+const ToursCard = ({card, getCard}) => {
     
     if(!card) return null;
 
@@ -39,6 +39,7 @@ const ToursCard = ({card}) => {
                         <Button
                             text="Book now!"
                             css="btn btn--white"
+                            event={(e) => getCard(e, id)}
                         />
                     </div>
                 </div>
