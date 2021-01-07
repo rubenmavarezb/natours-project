@@ -1,6 +1,10 @@
 .section-stories {
     padding: 15rem 0;
     position: relative;
+
+    @include screen(tabPort) {
+        padding:  10rem 0;
+    }
 }
 
 .story {
@@ -42,9 +46,7 @@
 
     &__caption {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center-hor-ver;
         color: $white;
         text-transform: uppercase;
         font-size: 1.7rem;

@@ -12,6 +12,11 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include screen(tabPort) {
+        padding: 10rem 0;
+    }
+
 }
 
 .feature-box {
@@ -23,6 +28,10 @@
     box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
     transition: transform .3s;
 
+    @include screen(tabPort) {
+        padding: 2rem;
+    }
+
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -31,6 +40,10 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        @include screen(tabPort) {
+            margin-bottom: 0rem;
+        }
     }
 
     &:hover {

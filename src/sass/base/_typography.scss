@@ -3,7 +3,7 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $grey-dark;
-    padding:3rem;
+    
 }
 
 .heading-primary{
@@ -11,6 +11,14 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+
+    @include screen(tabPort) {
+        font-size: 3rem;
+    }
+
+    @include screen(phone) {
+        font-size: 2.5rem;
+    }
 
     &--main{
         display: block;
@@ -20,6 +28,11 @@ body {
         animation-name: moveInLeft;
         animation-duration:1s;
         animation-timing-function: ease-out;
+
+        @include screen(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
       
     &--sub{
@@ -28,6 +41,10 @@ body {
         font-weight: 700;
         letter-spacing:1.74rem;
         animation: moveInRight 1s ease-out;
+
+        @include screen(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 .heading-secondary {

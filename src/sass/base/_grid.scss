@@ -4,6 +4,15 @@
 
     &:not(:last-child) {
         margin-bottom: $gap-vertical;
+
+        @include screen(tabPort) {
+            margin-bottom: $gap-vertical-sm;
+        }
+    }
+
+    @include screen(tabPort) {
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 
     @include clearfix;
@@ -13,6 +22,15 @@
 
         &:not(:last-child) {
             margin-right: $gap-horizontal;
+
+            @include screen(tabPort) {
+                margin-right: 0;
+                margin-bottom: $gap-vertical-sm;
+            }
+        }
+
+        @include screen(tabPort) {
+            width: 100% !important;
         }
     }
 
