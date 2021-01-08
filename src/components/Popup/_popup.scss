@@ -21,11 +21,20 @@
         opacity: 0;
         transform: translate(-50% -50%) scale(.25);
         transition: all .4s .2s;
+
+        @include screen(tabPort) {
+            display: block;
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include screen(tabPort) {
+            width: 50%;
+            display: flex;
+        }
     }
 
     &__right {
@@ -33,6 +42,13 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include screen(tabPort) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__img {
@@ -56,6 +72,18 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include screen(tabPort) {
+            -webkit-column-count: auto;
+            -moz-column-count: auto;
+            column-count: auto;
+            -webkit-column-gap: auto;
+            -moz-column-gap: auto;
+            column-gap: auto;
+            -webkit-column-rule: auto;
+            -moz-column-rule: auto;
+            column-rule: auto;
+        }
     }
     &.open {
         opacity: 1;
@@ -78,6 +106,16 @@
         cursor: pointer;
         line-height: 1;
         transition: all .2s;
+
+        @include screen(tabPort) {
+            background-color: $white;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            top: 1.5rem;
+            right: 1.5rem;
+            padding-top: .3rem;
+        }
 
 
         &:hover {
