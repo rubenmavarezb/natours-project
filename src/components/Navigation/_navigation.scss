@@ -39,10 +39,6 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
-        @include screen(phone) {
-            transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
-        }
-
         @include screen(tabPort) {
             top: 4.5rem;
             right: 4.5rem;
@@ -51,6 +47,7 @@
         @include screen(phone) {
             top: 3.5rem;
             right: 3.5rem;
+            transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
         }
     }
 
