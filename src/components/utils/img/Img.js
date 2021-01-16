@@ -1,8 +1,14 @@
 import React from 'react';
 
-const Img = ({path, alt, css}) => {
+const Img = ({attrs}) => {
     return ( 
-        <img src={path} alt={alt} className={css} />
+        <img
+            srcSet={attrs?.sourceSet}
+            sizes={attrs?.sizes} 
+            alt={`${attrs?.alt}`}
+            className={attrs?.css}
+            src={attrs?.path}
+        />
      );
 }
  

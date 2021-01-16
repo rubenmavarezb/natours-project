@@ -11,14 +11,20 @@ const StoryCard = ({story}) => {
 
     const image = require(`../../assets/img/${img}`);
 
+    const attrs = {
+        sourceSet: image.default,
+        sizes: '',
+        alt: 'Person on a tour',
+        css: 'story__img',
+        path: image.default
+    }
+
     return ( 
         <div className="row">
             <div className="story">
                 <figure className="story__shape">
                     <Img
-                        path={image.default}
-                        alt="Person on a tour"
-                        css="story__img"
+                        attrs={attrs}
                     />
                     <figcaption className="story__caption">{client}</figcaption>
                 </figure>

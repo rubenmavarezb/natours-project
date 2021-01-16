@@ -1,14 +1,68 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Heading2 from '../utils/heading2/Heading2';
 import Heading3 from '../utils/heading3/Heading3';
 import Paragraph from '../utils/paragraph/Paragraph';
 import Button from '../utils/button/Button';
 import Img from '../utils/img/Img';
 import image1 from '../../assets/img/nat-1-large.jpg';
+import image1small from '../../assets/img/nat-1.jpg';
 import image2 from '../../assets/img/nat-2-large.jpg';
+import image2small from '../../assets/img/nat-2.jpg';
 import image3 from '../../assets/img/nat-3-large.jpg';
+import image3small from '../../assets/img/nat-3.jpg';
 
 const Main = () => {
+
+    const [attrs, setattrs] = useState({
+        image1: {
+            sourceSet: '',
+            sizes: '',
+            alt: '',
+            css: '',
+            path: ''
+        },
+        image2: {
+            sourceSet: '',
+            sizes: '',
+            alt: '',
+            css: '',
+            path: ''
+        },
+        image3: {
+            sourceSet: '',
+            sizes: '',
+            alt: '',
+            css: '',
+            path: ''
+        },
+    })
+
+    useEffect(() => {
+        setattrs({
+            image1: {
+                sourceSet: `${image1small} 300w, ${image1} 1000w`,
+                sizes: '(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px',
+                alt: 'landscape-1',
+                css: 'composition__photo composition__photo--p1',
+                path: image1
+            },
+            image2: {
+                sourceSet: `${image2small} 300w, ${image2} 1000w`,
+                sizes: '(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px',
+                alt: 'landscape-2',
+                css: 'composition__photo composition__photo--p2',
+                path: image2
+            },
+            image3: {
+                sourceSet: `${image3small} 300w, ${image3} 1000w`,
+                sizes: '(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px',
+                alt: 'landscape-3',
+                css: 'composition__photo composition__photo--p3',
+                path: image3
+            }, 
+        })
+    }, [])
+
     return ( 
         <main id="section-about">
             <section className="section-about">
@@ -45,9 +99,9 @@ const Main = () => {
                     </div>
                     <div className="col-1-of-2">
                         <div className="composition">
-                            <Img path={image1} alt="Photo 1" css="composition__photo composition__photo--p1"/>
-                            <Img path={image2} alt="Photo 2" css="composition__photo composition__photo--p2"/>
-                            <Img path={image3} alt="Photo 3" css="composition__photo composition__photo--p3"/>
+                            <Img attrs={attrs.image1}/>
+                            <Img attrs={attrs.image2}/>
+                            <Img attrs={attrs.image3}/>
                         </div>
                     </div>
                 </div>

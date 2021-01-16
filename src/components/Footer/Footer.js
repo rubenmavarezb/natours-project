@@ -1,5 +1,8 @@
 import React from 'react';
-import logo from "../../assets/img/logo-green-2x.png"
+import logo2x from "../../assets/img/logo-green-2x.png";
+import logo1x from "../../assets/img/logo-green-1x.png";
+import logoSmall1x from "../../assets/img/logo-green-small-1x.png";
+import logoSmall2x from "../../assets/img/logo-green-small-2x.png";
 
 const Footer = () => {
     const listItems = [
@@ -13,11 +16,14 @@ const Footer = () => {
     return ( 
         <footer className="footer">
             <div className="footer__logo-box">
-                <img 
-                    src= {logo}
+                <picture className="footer__logo">
+                    <source srcSet={`${logoSmall1x} 1x, ${logoSmall2x} 2x`} media="(max-width: 37.5em)"/>
+                    <img 
+                    srcSet= {`${logo1x} 1x, ${logo2x} 2x`}
                     alt="Full logo" 
-                    className="footer__logo"
                 />
+                </picture>
+
             </div>
             <div className="row">
                 <div className="col-1-of-2">

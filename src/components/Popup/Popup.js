@@ -1,22 +1,62 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Heading2 from '../utils/heading2/Heading2';
 import Heading3 from '../utils/heading3/Heading3';
 import Button from '../utils/button/Button';
+import Img from '../utils/img/Img';
 
 const Popup = ({popup, open, setOpen}) => {
-    if(!popup) return null;
+    const [attrs, setattrs] = useState({
+        image1: {
+            sourceSet: '',
+            sizes: '',
+            alt: '',
+            css: '',
+            path: '',
+            path2: '',
+        },
+        image2: {
+            sourceSet: '',
+            sizes: '',
+            alt: '',
+            css: '',
+            path: '',
+            path2: '',
+        },
+    })
 
     const { title, img, img_secondary } = popup;
 
     const image = require(`../../assets/img/${img}`);
     const imageSecondary = require(`../../assets/img/${img_secondary}`);
 
+    useEffect(() => {
+        setattrs({
+            image1: {
+                sourceSet: image.default,
+                sizes: '(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px',
+                alt: 'Tour',
+                css: 'popup__img',
+                path: image.default
+            },
+            image2: {
+                sourceSet: imageSecondary.default,
+                sizes: '(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px',
+                alt: 'Tour2',
+                css: 'popup__img',
+                path: image.default
+            },
+        })
+        //eslint-disable-next-line
+    }, [])
+
+    if(!popup) return null;
+
     return (
         <div className={open ? "popup open" : "popup"}>
             <div className="popup__content">
                 <div className="popup__left">
-                    <img src={image.default} alt="Tour" className="popup__img"/>
-                    <img src={imageSecondary.default} alt="Tour2" className="popup__img"/>
+                    <Img attrs={attrs.image1}/>
+                    <Img attrs={attrs.image2}/>
                 </div>
                 <div className="popup__right">
                     <div 
